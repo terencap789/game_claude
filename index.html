@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Salle d'arcade</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="brand">★ ARCADE ★</div>
+<main>
+  <p class="tagline">Choisis un jeu pour commencer</p>
+  <div class="grid">
+    <a class="cab" style="--c:var(--snake)" href="snake.html">
+      <span class="icon">🐍</span><h3>Snake</h3>
+      <p>Mange les pommes, évite les murs et ta propre queue.</p>
+    </a>
+    <a class="cab" style="--c:var(--ttt)" href="morpion.html">
+      <span class="icon">✕⭕</span><h3>Morpion</h3>
+      <p>Grille personnalisable, à deux ou contre le robot.</p>
+    </a>
+    <a class="cab" style="--c:var(--dames)" href="dames.html">
+      <span class="icon">⚫</span><h3>Dames</h3>
+      <p>Prises obligatoires, dames volantes, à deux ou contre le robot.</p>
+    </a>
+    <a class="cab" style="--c:var(--chess)" href="echecs.html">
+      <span class="icon">♞</span><h3>Échecs</h3>
+      <p>Roque, échec et mat, à deux ou contre le robot.</p>
+    </a>
+  </div>
+</main>
+<footer class="hint">Salle d'arcade · fait pour jouer vite, sans installation</footer>
+</body>
+</html>
