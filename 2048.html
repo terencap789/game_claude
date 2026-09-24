@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2048 · Arcade</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>:root{--accent:var(--t2048);}</style>
+</head>
+<body>
+<div class="topbar"><a class="backBtn" href="index.html">← Menu</a><div class="gameTitle">🔢 2048</div></div>
+<main>
+  <div class="statusRow">
+    <div class="pill">Score <strong id="t2048Score">0</strong></div>
+    <div class="pill">Record <strong id="t2048High">0</strong></div>
+    <button class="actionBtn" id="t2048Restart">Recommencer</button>
+  </div>
+  <div class="canvas-container">
+    <div class="grid2048" id="t2048Grid"></div>
+    <div id="overlay" class="overlay hidden">
+      <div class="overlay-content">
+        <div id="overlayIcon" class="overlay-icon">🔢</div>
+        <h2 id="overlayTitle">2048</h2>
+        <p id="overlayText"></p>
+        <button class="actionBtn" id="overlayBtn">Continuer</button>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="hint">Flèches / WASD pour glisser les tuiles · fusionne deux tuiles identiques</footer>
+<script src="2048.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pong · Arcade</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>:root{--accent:var(--pong);}</style>
+</head>
+<body>
+<div class="topbar"><a class="backBtn" href="index.html">← Menu</a><div class="gameTitle">🏓 Pong</div></div>
+<main>
+
+  <section class="startScreen" id="startScreen">
+    <div class="optionGroup">
+      <span class="label">Adversaire</span>
+      <div class="optionRow" id="modeRow">
+        <button class="optBtn selected" data-mode="human">Deux joueurs</button>
+        <button class="optBtn" data-mode="bot">Contre le robot</button>
+      </div>
+    </div>
+    <button class="actionBtn" id="startBtn">Commencer</button>
+  </section>
+
+  <section id="gameScreen" style="display:none; align-items:center; flex-direction:column; gap:18px;">
+    <div class="statusRow">
+      <div class="pill">Joueur 1 <strong id="scoreLeft">0</strong></div>
+      <div class="pill" id="rightLabel">Joueur 2 <strong id="scoreRight">0</strong></div>
+      <button class="actionBtn" id="pongReset">Changer de partie</button>
+    </div>
+    <div class="canvas-container">
+      <canvas id="pongCanvas" class="gameCanvas" width="480" height="320"></canvas>
+      <div id="overlay" class="overlay hidden">
+        <div class="overlay-content">
+          <div id="overlayIcon" class="overlay-icon">🏓</div>
+          <h2 id="overlayTitle">Pong</h2>
+          <p id="overlayText">Premier à 5 points gagne. Appuie sur Espace pour lancer.</p>
+          <button class="actionBtn" id="startButton">Jouer</button>
+        </div>
+      </div>
+    </div>
+    <p style="color:var(--dim); font-size:13px; text-align:center;">Joueur 1 : W / S · Joueur 2 : ▲ / ▼</p>
+  </section>
+
+</main>
+<script src="pong.js"></script>
+</body>
+</html>

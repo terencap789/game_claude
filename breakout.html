@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casse-briques · Arcade</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>:root{--accent:var(--brick);}</style>
+</head>
+<body>
+<div class="topbar"><a class="backBtn" href="index.html">← Menu</a><div class="gameTitle">🧱 Casse-briques</div></div>
+<main>
+  <div class="statusRow">
+    <div class="pill">Score <strong id="brickScore">0</strong></div>
+    <div class="pill">Vies <strong id="brickLives">3</strong></div>
+  </div>
+  <div class="canvas-container">
+    <canvas id="brickCanvas" class="gameCanvas" width="480" height="420"></canvas>
+    <div id="overlay" class="overlay">
+      <div class="overlay-content">
+        <div id="overlayIcon" class="overlay-icon">🧱</div>
+        <h2 id="overlayTitle">Casse-briques</h2>
+        <p id="overlayText">Déplace la raquette avec les flèches, A/D ou la souris.</p>
+        <button class="actionBtn" id="startButton">Jouer</button>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="hint">Flèches / A-D / souris pour déplacer la raquette</footer>
+<script src="breakout.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dames · Arcade</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>:root{--accent:var(--dames);}</style>
+</head>
+<body>
+<div class="topbar"><a class="backBtn" href="index.html">← Menu</a><div class="gameTitle">⚫ Dames</div></div>
+<main>
+
+  <section class="startScreen" id="startScreen">
+    <div class="optionGroup">
+      <span class="label">Adversaire</span>
+      <div class="optionRow" id="modeRow">
+        <button class="optBtn selected" data-mode="human">Deux joueurs</button>
+        <button class="optBtn" data-mode="bot">Contre le robot</button>
+      </div>
+    </div>
+    <button class="actionBtn" id="startBtn">Commencer</button>
+  </section>
+
+  <section id="gameScreen" style="display:none; align-items:center; flex-direction:column; gap:18px;">
+    <div class="statusRow">
+      <div class="pill" id="damesStatus"></div>
+      <button class="actionBtn" id="damesReset">Changer de partie</button>
+    </div>
+    <div class="board8" id="damesBoard"></div>
+    <p style="color:var(--dim); font-size:13px; max-width:420px; text-align:center;">
+      La prise est obligatoire. Une dame (pièce couronnée) se déplace et capture sur toute la diagonale.
+    </p>
+  </section>
+
+</main>
+<script src="dames.js"></script>
+</body>
+</html>
